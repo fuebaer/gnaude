@@ -1,0 +1,6 @@
+{
+  "uuid": "gnaude-e2e@test",
+  "name": "Gnaude E2E driver",
+  "description": "Drives Gnaude inside a throwaway headless GNOME Shell. Never install this in a real session.",
+  "shell-version": ["50", "51"]
+}

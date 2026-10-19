@@ -1,0 +1,13 @@
+{
+  "uuid": "gnaude@n2soft.de",
+  "name": "Gnaude",
+  "description": "Chat with Claude (Anthropic API) from a quick launcher dialog. Chats and their history live in the top bar menu.",
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "url": "https://github.com/fuebaer/gnaude",
+  "settings-schema": "org.gnome.shell.extensions.gnaude",
+  "gettext-domain": "gnaude",
+  "version-name": "0.2.0"
+}

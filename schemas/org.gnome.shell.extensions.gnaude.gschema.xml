@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.gnaude" path="/org/gnome/shell/extensions/gnaude/">
+    <key name="model" type="s">
+      <default>'claude-opus-5-5'</default>
+      <summary>Claude model ID used for new prompts</summary>
+    </key>
+    <key name="effort" type="s">
+      <choices>
+        <choice value="low"/>
+        <choice value="medium"/>
+        <choice value="high"/>
+        <choice value="xhigh"/>
+        <choice value="max"/>
+      </choices>
+      <default>'medium'</default>
+      <summary>Effort level (output_config.effort)</summary>
+    </key>
+    <key name="toggle-dialog" type="as">
+      <default><![CDATA[['<Control><Super>space']]]></default>
+      <summary>Shortcut that opens the prompt dialog</summary>
+    </key>
+    <key name="continue-last-chat" type="b">
+      <default>false</default>
+      <summary>Reopen the most recent chat instead of starting a new one</summary>
+    </key>
+    <key name="history-size" type="i">
+      <range min="1" max="500"/>
+      <default>50</default>
+      <summary>Number of chats kept in the history</summary>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,319 @@
+# Italian translation for Gnaude.
+# This file is distributed under the same license as the Gnaude package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnaude\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 07:53+0200\n"
+"PO-Revision-Date: 2026-10-18 22:00+0200\n"
+"Last-Translator: Gnaude contributors\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: prefs.js:25
+msgid "Disabled"
+msgstr "Disattivata"
+
+#: prefs.js:32
+msgid "Restore default"
+msgstr "Ripristina predefinita"
+
+#: prefs.js:52
+msgid "Set Shortcut"
+msgstr "Imposta scorciatoia"
+
+#: prefs.js:53
+msgid ""
+"Press the new key combination.\n"
+"Esc cancels, Backspace disables the shortcut."
+msgstr ""
+"Premi la nuova combinazione di tasti.\n"
+"Esc annulla, Backspace disattiva la scorciatoia."
+
+#: prefs.js:55
+msgid "Cancel"
+msgstr "Annulla"
+
+#: prefs.js:120
+msgid "Anthropic API"
+msgstr "API Anthropic"
+
+#: prefs.js:121
+msgid "The API key is stored in the GNOME keyring, not in dconf."
+msgstr "La chiave API è salvata nel portachiavi di GNOME, non in dconf."
+
+#: prefs.js:125
+msgid "Enter API key"
+msgstr "Inserisci la chiave API"
+
+#: prefs.js:130
+msgid "Stored API key"
+msgstr "Chiave API memorizzata"
+
+#: prefs.js:133
+msgid "Remove the API key from the keyring"
+msgstr "Rimuovi la chiave API dal portachiavi"
+
+#: prefs.js:141
+msgid "Create an API key"
+msgstr "Crea una chiave API"
+
+#. Translators: %s are the last four characters of the API key
+#: prefs.js:156
+#, javascript-format
+msgid "Present (ends in …%s)"
+msgstr "Presente (termina con …%s)"
+
+#: prefs.js:156
+msgid "None"
+msgstr "Nessuna"
+
+#: prefs.js:159
+#, javascript-format
+msgid "Keyring not available: %s"
+msgstr "Portachiavi non disponibile: %s"
+
+#: prefs.js:171
+msgid "API key saved"
+msgstr "Chiave API salvata"
+
+#: prefs.js:173
+#, javascript-format
+msgid "Saving failed: %s"
+msgstr "Salvataggio non riuscito: %s"
+
+#: prefs.js:180
+msgid "API key removed"
+msgstr "Chiave API rimossa"
+
+#: prefs.js:182
+#, javascript-format
+msgid "Removing failed: %s"
+msgstr "Rimozione non riuscita: %s"
+
+#: prefs.js:193
+msgid "Model"
+msgstr "Modello"
+
+#: prefs.js:194
+msgid ""
+"Defaults for new chats. The prompt dialog can switch the model and effort of "
+"each chat."
+msgstr "Valori predefiniti per le nuove chat. Nella finestra del prompt si possono cambiare modello e impegno di ogni chat."
+
+#: prefs.js:196
+msgid "Claude model"
+msgstr "Modello Claude"
+
+#: prefs.js:199
+msgid "Effort"
+msgstr "Impegno"
+
+#: prefs.js:200
+msgid "Lower answers faster and cheaper, higher thinks more thoroughly"
+msgstr ""
+"Più basso risponde più velocemente e costa meno, più alto ragiona più a fondo"
+
+#: prefs.js:206
+msgid "Usage"
+msgstr "Utilizzo"
+
+#: prefs.js:208
+msgid "Shortcut"
+msgstr "Scorciatoia"
+
+#: prefs.js:209
+msgid "Opens and closes the prompt dialog"
+msgstr "Apre e chiude la finestra del prompt"
+
+#: prefs.js:213
+msgid "Continue the last chat"
+msgstr "Continua l’ultima chat"
+
+#: prefs.js:214
+msgid ""
+"The shortcut and the top bar icon reopen the most recent chat instead of "
+"starting a new one"
+msgstr ""
+"La scorciatoia e l’icona nella barra superiore riaprono la chat più recente "
+"invece di iniziarne una nuova"
+
+#: prefs.js:220
+msgid "Chats in the history"
+msgstr "Chat nella cronologia"
+
+#. Translators: number of questions asked in a chat, shown in the history menu
+#: lib/indicator.js:61
+#, javascript-format
+msgid "%d question"
+msgid_plural "%d questions"
+msgstr[0] "%d domanda"
+msgstr[1] "%d domande"
+
+#: lib/indicator.js:73 lib/promptDialog.js:295
+msgid "Stop"
+msgstr "Interrompi"
+
+#: lib/indicator.js:130
+msgid "New chat …"
+msgstr "Nuova chat…"
+
+#: lib/indicator.js:132
+msgid "History"
+msgstr "Cronologia"
+
+#: lib/indicator.js:134
+msgid "No chats yet"
+msgstr "Ancora nessuna chat"
+
+#: lib/indicator.js:151
+msgid "Clear history"
+msgstr "Cancella cronologia"
+
+#: lib/indicator.js:153
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: lib/messages.js:16
+msgid "thinking …"
+msgstr "sta pensando…"
+
+#: lib/messages.js:18
+msgid "writing …"
+msgstr "sta scrivendo…"
+
+#: lib/messages.js:20
+msgid "fallback model takes over …"
+msgstr "subentra il modello di riserva…"
+
+#: lib/messages.js:22
+msgid "connecting …"
+msgstr "connessione…"
+
+#: lib/messages.js:29
+msgid "done"
+msgstr "completato"
+
+#: lib/messages.js:31
+msgid "declined"
+msgstr "rifiutato"
+
+#: lib/messages.js:33
+msgid "cancelled"
+msgstr "annullato"
+
+#: lib/messages.js:35
+msgid "error"
+msgstr "errore"
+
+#: lib/messages.js:48
+msgid "fallback model"
+msgstr "modello di riserva"
+
+#: lib/messages.js:50
+msgid "cut off (maximum length)"
+msgstr "troncato (lunghezza massima)"
+
+#: lib/messages.js:62
+msgid "No API key set. Add one in the Gnaude preferences."
+msgstr ""
+"Nessuna chiave API impostata. Aggiungine una nelle preferenze di Gnaude."
+
+#: lib/messages.js:64
+msgid "Interrupted (the extension was reloaded)."
+msgstr "Interrotto (l’estensione è stata ricaricata)."
+
+#: lib/messages.js:66
+msgid "Cancelled."
+msgstr "Annullato."
+
+#: lib/messages.js:68
+msgid "The connection closed before the answer was complete."
+msgstr "La connessione si è chiusa prima che la risposta fosse completa."
+
+#. Translators: %s is a refusal category reported by the API, e.g. "cyber"
+#: lib/messages.js:72
+#, javascript-format
+msgid "Claude declined this request (category: %s)."
+msgstr "Claude ha rifiutato questa richiesta (categoria: %s)."
+
+#: lib/messages.js:73
+msgid "Claude declined this request."
+msgstr "Claude ha rifiutato questa richiesta."
+
+#: lib/messages.js:89
+msgid "Writing the answer …"
+msgstr "Scrittura della risposta…"
+
+#: lib/messages.js:91
+msgid "(empty answer)"
+msgstr "(risposta vuota)"
+
+#: lib/models.js:18
+msgid "Low (fastest)"
+msgstr "Basso (più veloce)"
+
+#: lib/models.js:18
+msgid "Low"
+msgstr "Basso"
+
+#: lib/models.js:19
+msgid "Medium"
+msgstr "Medio"
+
+#: lib/models.js:20
+msgid "High"
+msgstr "Alto"
+
+#: lib/models.js:21
+msgid "Very high"
+msgstr "Molto alto"
+
+#: lib/models.js:22
+msgid "Maximum"
+msgstr "Massimo"
+
+#: lib/promptDialog.js:86
+msgid ""
+"Enter: send  ·  Shift+Enter: new line  ·  Ctrl+M: model  ·  Ctrl+E: effort  "
+"·  Ctrl+N: new chat  ·  Esc: close"
+msgstr "Invio: invia  ·  Maiusc+Invio: nuova riga  ·  Ctrl+M: modello  ·  Ctrl+E: impegno  ·  Ctrl+N: nuova chat  ·  Esc: chiudi"
+
+#: lib/promptDialog.js:240
+msgid "Choose model"
+msgstr "Scegli il modello"
+
+#: lib/promptDialog.js:252
+msgid "Choose effort"
+msgstr "Scegli l’impegno"
+
+#: lib/promptDialog.js:296 lib/promptDialog.js:529
+msgid "Copy"
+msgstr "Copia"
+
+#: lib/promptDialog.js:297
+msgid "New chat"
+msgstr "Nuova chat"
+
+#. Translators: %s is the effort level set in the preferences, e.g. "Medium"
+#: lib/promptDialog.js:430
+#, javascript-format
+msgid "Default (%s)"
+msgstr "Predefinito (%s)"
+
+#: lib/promptDialog.js:449
+msgid "Ask a follow-up question …"
+msgstr "Fai una domanda di approfondimento…"
+
+#: lib/promptDialog.js:449
+msgid "Ask Claude …"
+msgstr "Chiedi a Claude…"
+
+#: lib/promptDialog.js:523
+msgid "Copied ✓"
+msgstr "Copiato ✓"
