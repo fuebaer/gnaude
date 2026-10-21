@@ -1,7 +1,7 @@
 {
   "uuid": "gnaude@n2soft.de",
   "name": "Gnaude",
-  "description": "Chat with Claude (Anthropic API) from a quick launcher dialog. Chats and their history live in the top bar menu.",
+  "description": "Chat with Claude (Anthropic API) from a quick launcher dialog. Chats and their history live in the top bar menu.\n\nRequires your own Anthropic API key, stored in the GNOME keyring. Prompts and chat history are sent to api.anthropic.com. The Copy button writes answers to the clipboard; Gnaude never reads the clipboard.",
   "shell-version": [
     "50",
     "51"

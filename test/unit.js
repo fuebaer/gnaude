@@ -146,10 +146,6 @@ function testReplay() {
     check('replay: before a fallback only text is echoed',
         replayContent(content).map(b => b.signature ?? b.type).join() === 'text,fallback,b,text');
     check('replay: without fallback everything is echoed', replayContent(content.slice(0, 2)).length === 2);
-    check('replay: version 1 answers become a text block',
-        JSON.stringify(buildMessages({turns: [
-            {prompt: 'a', status: 'done', response: 'A'}, {prompt: 'b', status: 'pending'},
-        ]})[1]) === JSON.stringify({role: 'assistant', content: [{type: 'text', text: 'A'}]}));
 }
 
 async function testHistory() {
@@ -209,24 +205,12 @@ async function testEffort() {
     await store.flush();
 }
 
-async function testMigration() {
-    const dir = GLib.dir_make_tmp('gnaude-test-XXXXXX');
-    const path = GLib.build_filenamev([dir, 'history.json']);
-    const v1 = [
-        {id: 'n', prompt: 'neu', response: 'Neu', model: 'claude-opus-5-5', status: 'done', createdAt: 2, finishedAt: 3},
-        {id: 'o', prompt: 'alt', response: '', model: 'claude-opus-5-5', status: 'error', error: 'kaputt', createdAt: 1},
-    ];
-    GLib.file_set_contents(path, JSON.stringify(v1));
-
+async function testUnknownFormat() {
+    const path = GLib.build_filenamev([GLib.dir_make_tmp('gnaude-test-XXXXXX'), 'history.json']);
+    GLib.file_set_contents(path, JSON.stringify([{id: 'x', prompt: 'old format'}]));
     const store = new HistoryStore({path, maxEntries: 10});
     await store.load();
-    const [neu, alt] = store.conversations;
-    check('migration: entries become one-turn chats',
-        neu.id === 'n' && neu.turns.length === 1 && neu.turns[0].response === 'Neu' && neu.updatedAt === 3);
-    check('migration: errors are kept', alt.turns[0].status === 'error' && alt.turns[0].error === 'kaputt');
-    check('migration: turns keep their model', neu.turns[0].model === 'claude-opus-5-5');
-    store.startTurn({conversationId: 'n', prompt: 'weiter', model: 'x', system: 'frozen'});
-    check('migration: first follow-up freezes the system prompt', neu.system === 'frozen');
+    check('history: files in another format are ignored', store.conversations.length === 0);
 }
 
 function testMarkdown() {
@@ -261,7 +245,7 @@ const loop = new GLib.MainLoop(null, false);
         testReplay();
         await testHistory();
         await testEffort();
-        await testMigration();
+        await testUnknownFormat();
         testMarkdown();
     } catch (e) {
         check(`unexpected exception: ${e.message}`, false, e.stack);

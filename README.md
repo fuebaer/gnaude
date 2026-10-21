@@ -175,7 +175,7 @@ screenshots to the output directory. Requirements: `gjs`, `python3`, `gnome-keyr
 | `prefs.js` | Preferences window (libadwaita) |
 | `lib/anthropic.js` | Streaming client for `POST /v1/messages` (libsoup, server-sent events) |
 | `lib/conversation.js` | System prompt; builds the request messages from a chat |
-| `lib/history.js` | Chats with JSON persistence and migration of older formats |
+| `lib/history.js` | Chats with JSON persistence |
 | `lib/promptDialog.js` | Dialog with multi-line input, model and effort selectors, transcript |
 | `lib/indicator.js` | Top bar icon and history menu |
 | `lib/messages.js` | Translated status and error texts |

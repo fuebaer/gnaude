@@ -68,6 +68,7 @@ export default class GnaudeExtension extends Extension {
         this._notificationSource?.destroy();
         this._notificationSource = null;
 
+        this._client.destroy();
         this._client = null;
         this.history = null;
     }
@@ -83,7 +84,12 @@ export default class GnaudeExtension extends Extension {
             this.openDialog(); // not on top of another system modal dialog
     }
 
-    /** Opens the dialog with a new chat, or the latest one if the user prefers that. */
+    /**
+     * Opens the dialog with a new chat, or the latest one if the user prefers that.
+     *
+     * @param {object} [options]
+     * @param {boolean} [options.fresh] - always start a new chat
+     */
     openDialog({fresh = false} = {}) {
         const [latest] = this.history.conversations;
         if (!fresh && latest && this._settings.get_boolean('continue-last-chat'))
@@ -101,6 +107,10 @@ export default class GnaudeExtension extends Extension {
      * The conversation is updated while the answer streams in, whether or not the
      * dialog stays open.
      *
+     * @param {string} prompt
+     * @param {string|null} [conversationId] - the chat to continue, or null for a new one
+     * @param {object} [options]
+     * @param {string|null} [options.effort] - effort override for a new chat
      * @returns {import('./lib/history.js').Conversation}
      */
     submit(prompt, conversationId = null, {effort = null} = {}) {

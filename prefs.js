@@ -11,9 +11,6 @@ import {clearApiKey, lookupApiKey, storeApiKey} from './lib/secret.js';
 
 const API_KEYS_URL = 'https://platform.claude.com/settings/keys';
 
-// Adw.ShortcutLabel replaces the deprecated Gtk.ShortcutLabel (libadwaita >= 1.8).
-const ShortcutLabel = Adw.ShortcutLabel ?? Gtk.ShortcutLabel;
-
 const ShortcutRow = GObject.registerClass(
 class ShortcutRow extends Adw.ActionRow {
     constructor(settings, key, params) {
@@ -21,7 +18,7 @@ class ShortcutRow extends Adw.ActionRow {
         this._settings = settings;
         this._key = key;
 
-        this._label = new ShortcutLabel({
+        this._label = new Adw.ShortcutLabel({
             disabled_text: _('Disabled'),
             valign: Gtk.Align.CENTER,
         });
